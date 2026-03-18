@@ -1,0 +1,34 @@
+# Source code - NEVER commit
+*.cpp
+*.c
+*.h
+*.hpp
+
+# Build artifacts
+*.pdb
+*.obj
+*.lib
+*.exp
+*.ilk
+*.idb
+*.log
+
+# Build directories
+build*/
+Release/
+Debug/
+x64/
+x86/
+.vs/
+
+# Tools/scripts (internal use only)
+tools/
+*.py
+
+# IDE
+*.sln
+*.vcxproj*
+CMakeLists.txt
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles/
