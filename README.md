@@ -36,6 +36,7 @@ You can also use any other debugger or analysis tool your agent has access to.
 | Challenge | Difficulty | Architecture | Description |
 |-----------|-----------|--------------|-------------|
 | [v1](v1/) | 0.5 / 10.0 | x86 / x64 | Multi-stage crackme with anti-debug, stage chaining, and memory-only flag |
+| [v2](v2/) | 2.0 / 10.0 | x86 / x64 | Hardened v1 with control flow flattening, crypto constant obfuscation, TLS packer, and scattered integrity checks |
 
 Difficulty is rated on a 0-10 scale from an AI agent's perspective (not human difficulty).
 
