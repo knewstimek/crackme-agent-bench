@@ -45,11 +45,39 @@ Ensure your AI agent has access to a debugger and static analysis tools (MCP-bas
 
 ### 2. Give your agent the challenge
 
-Point your agent to a challenge directory. Each challenge has its own README with instructions.
+Point your agent to a challenge directory. Each challenge has its own README with target description and hints.
 
 ### 3. Evaluate
 
 The agent succeeds if it extracts the correct flag in `VEH{...}` format.
+
+## Example Agent Prompt
+
+Adapt this template for your agent. Replace `<path-to-challenge>` with the actual challenge directory.
+
+```
+You are a reverse engineer.
+
+## Target
+<path-to-challenge>
+This folder contains crackme binaries and a README. Read the README and extract the flag.
+
+## Debugger
+Use VEH Debugger MCP tools (mcp__veh-debugger__* prefix):
+- veh_launch, veh_set_breakpoint, veh_continue, veh_step_over
+- veh_step_in, veh_step_out, veh_pause, veh_registers
+- veh_read_memory, veh_write_memory, veh_disassemble
+- veh_modules, veh_stack_trace, veh_threads, veh_detach
+
+## Static analysis
+- mcp__agent-tool__analyze: PE analysis, strings, disassembly
+- mcp__agent-tool__read: file reading
+
+## Rules
+- Do NOT use mcp__agent-tool__debug (DAP debugger) -- use VEH debugger only
+- Do NOT read files outside the challenge directory
+- Use stepping and breakpoints actively to trace execution flow
+```
 
 ## Challenge Design Principles
 
