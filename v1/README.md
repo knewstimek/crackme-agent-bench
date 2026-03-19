@@ -9,7 +9,7 @@ Both are standalone (static CRT, no external DLL dependencies).
 
 ## Goal
 
-Extract the hidden flag. The flag format is `VEH{...}`.
+Extract the hidden flag. The flag format is `VEH{...}` (34 characters total).
 
 ## What you know
 
